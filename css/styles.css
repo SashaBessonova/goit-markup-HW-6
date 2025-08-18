@@ -62,7 +62,7 @@ img {
 }
 
 .container {
-  min-width: 320px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -122,9 +122,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-ocean);
-  padding: 24px 0;
+  padding: 16px 0;
   display: block;
-  margin-right: 120px;
 }
 
 .header-nav-logo-black {
@@ -239,10 +238,8 @@ img {
 .hero.section {
   width: 100%;
   background-color: var(--color-grey);
-  max-width: 320px;
   margin: 0 auto;
   padding: 72px 0;
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
   background: var(--navy-blue);
@@ -270,7 +267,6 @@ img {
 @media screen and (min-width: 768px) {
   .hero.section {
     width: 100%;
-    max-width: 768px;
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -295,7 +291,6 @@ img {
 @media screen and (min-width: 1158px) {
   .hero.section {
     width: 100%;
-    max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -365,19 +360,12 @@ img {
 
 /* region Benefits*/
 .benefits {
-  max-width: 320px;
   margin: 0 auto;
   padding: 96px 0;
-}
-@media screen and (min-width: 768px) {
-  .benefits {
-    max-width: 768px;
-  }
 }
 
 @media screen and (min-width: 1158px) {
   .benefits {
-    max-width: 1440px;
     padding: 120px 0;
   }
 }
@@ -473,15 +461,9 @@ img {
   background-color: var(--color-cloud);
   padding: 96px 0;
 }
-@media screen and (min-width: 768px) {
-  .team {
-    max-width: 768px;
-  }
-}
 
 @media screen and (min-width: 1158px) {
   .team {
-    max-width: 1440px;
     padding: 120px 0;
   }
 }
@@ -588,6 +570,7 @@ img {
   fill: var(--color-cloud);
 }
 /*Portfolio Section*/
+/*Portfolio Section*/
 .portfolio {
   padding-top: 96px;
   padding-bottom: 72px;
@@ -656,6 +639,11 @@ img {
 @media screen and (min-width: 1158px) {
   .portfolio-list {
     row-gap: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100%-48px) / 2);
   }
 }
 
@@ -1221,7 +1209,7 @@ img {
 }
 
 .mobile-menu__open {
-  padding: 24px 0;
+  padding: 16px 0;
   line-height: 0;
   background-color: transparent;
   border: none;
@@ -1257,11 +1245,19 @@ img {
   padding: 72px 24px 40px 16px;
   display: flex;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  max-width: 320px;
 }
 .mobile-menu__close {
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1273,15 +1269,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu__wrapper {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: auto;
-}
+
 .mobile-menu__close:hover,
 .mobile-menu__close:focus {
   background-color: var(--color-ocean);
